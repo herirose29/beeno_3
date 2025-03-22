@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 100%;
+    max-width: calc(100vh * 16/9);
+    padding: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0.5vw;
+    background-color: #FFFF88;
+    padding: 3vw;
+    border-radius: 15px;
+    border: 3px solid #FFD700;
+    aspect-ratio: 16/9;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.letter img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.letter.selected {
+    
+    z-index: 1;
+    background-color: #FFE60099;
+    border-radius: 50%;
+}
+
+.letter.found {
+    background-color: #FFE60099;
+    
+
+}
+
+.display-none{
+    display: none;
+}

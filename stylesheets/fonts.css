@@ -1,0 +1,20 @@
+/* Общие настройки шрифтов */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.score-text {
+    color: #0B3016;
+    font-size: 16px;
+    user-select: none;
+}
+
+.end-message h1 {
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.end-message p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}

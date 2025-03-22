@@ -1,0 +1,160 @@
+/* Адаптивные настройки */
+@media (max-width: 768px) {
+    .flowers-panel {
+        width: 25%;
+    }
+    
+    .bouquet-area {
+        width: 75%;
+    }
+    
+    .stem-spot {
+        width: 15%;
+    }
+    
+    .placed-flower {
+        width: 13%;
+    }
+    
+    .score-container {
+        top: 2%;
+        left: 2%;
+        padding: 2% 3%;
+    }
+    
+    .score-text {
+        font-size: 14px;
+    }
+    
+    .bee {
+        width: 20%;
+        height: 20%;
+    }
+    
+    .game-board {
+        gap: 0.3vw;
+        padding: 2vw;
+    }
+    
+    .letter {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .modal-panels-container {
+        gap: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .flowers-panel {
+        width: 30%;
+    }
+    
+    .bouquet-area {
+        width: 70%;
+    }
+    
+    .stem-spot {
+        width: 18%;
+    }
+    
+    .placed-flower {
+        width: 16%;
+    }
+    
+    .hand-with-stems {
+        width: 70%;
+    }
+    
+    .score-container {
+        padding: 3% 4%;
+    }
+    
+    .score-text {
+        font-size: 12px;
+    }
+    
+    .bee {
+        width: 25%;
+        height: 25%;
+    }
+    
+    .game-board {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .letter {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .end-message {
+        padding: 15px;
+    }
+    
+    .end-message h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .end-message p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+.rotation-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #042A59;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.rotation-content {
+    padding: 20px;
+    max-width: 80%;
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 20px;
+    height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.rotate-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .rotation-message {
+        display: flex;
+    }
+    
+    #bg-container, .game-container, .game-screen {
+        display: none;
+    }
+}

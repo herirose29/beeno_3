@@ -1,0 +1,132 @@
+/* Элементы цветочной игры */
+.flower {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.stem-spot {
+    width: 12%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px dashed #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.stem-spot.highlight {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #4CAF50;
+}
+
+.placed-flower {
+    width: 10%;
+    height: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    z-index: 10;
+    cursor: grab;
+}
+
+.flowers-panel img, .stem-area img, .placed-flower {
+    height: 90%;
+    width: 100%;
+}
+
+.placed-flower img {
+    height: 145%;
+    width: 145%;
+    position: absolute;
+    left: -20%;
+    top: -20%;
+}
+
+/* Элементы игры с пчелами */
+.bee {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.bee img {
+    width: 100%;
+    height: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* Элементы игры с буквами */
+.letter {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: background-color 0.3s ease;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.letter img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.letter.selected {
+    z-index: 1;
+    background-color: #FFE60099;
+    border-radius: 50%;
+}
+
+.letter.found {
+    background-color: #FFE60099;
+}
+
+/* Стили объектов */
+.object {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+#obj1 {
+    height: 5%;
+    right: 17%;
+    top: 15.5%;
+}
+
+#obj2 {
+    height: 7%;
+    left: 13.3%;
+    top: 37.5%;
+}
+
+#obj3 {
+    height: 12%;
+    right: 5%;
+    top: 73.8%;
+}
